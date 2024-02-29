@@ -60,3 +60,26 @@ title = {
 };
 let difThings = ['hello', true, null, 11];
 difThings.push({ id: 22 });
+function addTogether(value) {
+    return value + value;
+}
+const resultOne = addTogether('hello');
+const resultTwo = addTogether(5);
+//useful when migrating from js to ts
+//because using  any won't cause errors initially
+//tuples
+let person = ['mario', 30, true];
+let hsla;
+hsla = [200, '100%', '100%', 1];
+let xy;
+xy = [94.7, 20.1];
+function useCoords() {
+    const lat = 100;
+    const long = 50;
+    return [lat, long];
+}
+const [lat, long] = useCoords();
+//named tuples
+let woman;
+woman = ['Nina', 25];
+console.log(woman[0]);

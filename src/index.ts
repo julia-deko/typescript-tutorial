@@ -88,3 +88,38 @@ title = {
 let difThings: any[] = ['hello', true, null, 11]
 
 difThings.push({id: 22})
+
+function addTogether(value: any): any {
+  return value + value
+}
+
+const resultOne = addTogether('hello')
+const resultTwo = addTogether(5)
+
+//useful when migrating from js to ts
+//because using  any won't cause errors initially
+
+//tuples
+
+let person: [string, number, boolean] = ['mario', 30, true]
+
+let hsla: [number, string, string, number]
+
+hsla = [200, '100%', '100%', 1]
+
+let xy: [number, number]
+xy = [94.7, 20.1]
+
+function useCoords(): [number, number] {
+  const lat = 100
+  const long = 50
+
+  return [lat, long]
+}
+
+const [lat, long] = useCoords()
+
+//named tuples
+let woman: [name: string, age: number]
+woman = ['Nina', 25]
+console.log(woman[0])
