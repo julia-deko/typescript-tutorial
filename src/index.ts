@@ -48,11 +48,11 @@ const id = user.id;
 
 //functions
 
-function addTwoNumbers(a: number, b: number): number {
+function addTwoNumbers(a: number, b: number): number  {
   return a + b 
 }
 
-const subtractTwoNumbers = (a: number, b: number): number {
+const subtractTwoNumbers = (a: number, b: number): number => {
   return a - b
 }
 
@@ -71,3 +71,20 @@ function formatGreeting(name: string, greeting: string) {
 }
 
 const result = formatGreeting('mario', 'hello')
+
+// any type
+
+let time : any
+let title
+
+time = 10
+time = true
+
+title = 25
+title = {
+  hello: 'world'
+}
+
+let difThings: any[] = ['hello', true, null, 11]
+
+difThings.push({id: 22})
